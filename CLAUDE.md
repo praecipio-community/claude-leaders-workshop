@@ -105,10 +105,10 @@ Do this in exercise 1, right after the GitHub account section above. Say: "Next 
 2. **Ask to join.** Say the join sentence. Open a join issue:
 
    ```
-   gh issue create --repo praecipio-community/claude-leaders-workshop --title "Join" --body "Please add me to the workshop."
+   gh api repos/praecipio-community/claude-leaders-workshop/issues -f title="Join" -f body="Please add me to the workshop."
    ```
 
-   If that fails (for example on path B), run `gh api -X PUT user/starred/praecipio-community/claude-leaders-workshop` to star the repo. Either one tells the watcher who you are. If both fail, ask the attendee to click **Star** at https://github.com/praecipio-community/claude-leaders-workshop, then continue.
+   Use `gh api` exactly like this. Do not use `gh issue create`, because it uses GitHub's GraphQL API, which sandboxes block. If the call fails, ask the attendee to click **Star** at https://github.com/praecipio-community/claude-leaders-workshop and tell you when they have. A star also tells the watcher who they are.
 3. **Accept the invitation.** Wait 15 seconds. Then try `gh api user/repository_invitations --jq '.[] | select(.repository.full_name=="praecipio-community/claude-leaders-workshop") | .id'` and, if it prints a number, `gh api -X PATCH user/repository_invitations/<id>`. If that fails, which it does on path B, say: "Your invitation is ready. Please click Accept here, then tell me 'accepted':" and show https://github.com/praecipio-community/claude-leaders-workshop/invitations as a link. This is the one click on GitHub in the whole workshop. If the page says there is no invitation, wait 15 seconds and ask them to refresh it.
 4. **Confirm.** Run step 1 again. When it prints `true`, say: "You are in. You can push your own branch now, and main stays protected, so nothing changes without a review."
 
