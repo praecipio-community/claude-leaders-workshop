@@ -8,15 +8,38 @@ The exercise has two parts.
 
 ## Part 1: pick the work and write the rules
 
-Use any Claude: the app, the website, your phone, or Cowork. No GitHub needed. Paste this:
+Use any Claude: the app, the website, your phone, or Cowork. Paste this:
 
 ```
-Interview me, one question at a time, about 3 tasks my team repeats.
-Help me pick the one to hand to Claude first.
-Then write rules for it in 15 lines or fewer: the goal, the inputs,
-numbered rules, the output format, and when to stop and ask.
-Leave out names, clients, and links.
+Help me pick one task my team repeats to hand to Claude first. Then write its rules.
+
+How to ask: use your multiple-choice question tool (AskUserQuestion) if you have it. If you do not, ask one question at a time with 2 to 4 lettered options. Put your recommended option first. Let me type my own answer. Ask 8 questions or fewer. Keep each one short.
+
+Ask in this order:
+1. Which area do I lead? Offer common areas.
+2. Which tasks does my team repeat every week or month? Suggest 4 that fit my area. I pick 3 or type my own.
+For questions 3 to 6, use my 3 tasks as the options.
+3. Which one follows the same steps every time, with the fewest judgment calls?
+4. Which one could I explain in writing to a new hire in 10 minutes?
+5. Which one starts from a report or system export, so I could check the result against it in 5 minutes?
+6. Which one can I give Claude under my firm's data and AI rules, with no client or personal data? Add the option "none yet."
+7. Recommend one task in 3 short reasons tied to my answers. If a task is blocked, say whether the block is the tool, the context, or the policy. Ask me to confirm or pick another.
+8. Which part of this task stays with a person: the decision, the sign-off, or the exceptions?
+
+Then write the rules in 15 lines or fewer, in this shape:
+# Rules: <short task name>
+**Goal:** <one sentence: the finished output and who uses it>
+**Inputs:** <what the agent starts from, in generic terms>
+1. <5 to 8 numbered rules, one per line>
+**Output format:** <the shape of the result>
+**Stop and ask when:** <the part that stays with a person, from question 8>
+
+Leave out names, clients, and links. Use roles and generic terms.
 ```
+
+Claude asks up to 8 short questions. Most have options you can tap. Then it recommends one task and writes its rules.
+
+The questions are the ones we ask when we choose which work an agent should do first. Does it follow the same steps every time? Can you write down how it is done? Can you check the result against a source? Is it allowed under your rules? Who signs off?
 
 Keep the rules Claude writes. You use them in part 2.
 
