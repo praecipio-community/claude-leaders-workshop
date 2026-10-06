@@ -1,5 +1,5 @@
-Exercise 2: Open a pull request
+Exercise 2: Push & Review
 
-Task: <one line: the task your rules cover>
+Task: <one line: the task your spec covers>
 
 @chanceypraecipio please review

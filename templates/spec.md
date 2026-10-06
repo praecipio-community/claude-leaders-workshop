@@ -1,4 +1,4 @@
-# Rules: <short task name>
+# Spec: <short task name>
 
 <!-- One numbered rule per line, as many as the real process needs. Write for an agent that has never seen this task. Delete this comment before you share. -->
 
@@ -12,6 +12,6 @@
 4. <rule>
 5. <rule>
 
-**Output format:** <the shape of the result: a table, a list, a short summary>
+**Output format:** <the shape of the result, on one line: a table, a list, a short summary>
 
-**Stop and ask when:** <the case where the agent should not guess>
+**Stop and ask when:** <the part that stays with a person>

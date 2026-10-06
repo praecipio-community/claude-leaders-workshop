@@ -1,4 +1,4 @@
-# Rules: monthly operating review summary
+# Spec: monthly operating review summary
 
 **Goal:** A one-page summary that a leader reads before the monthly operating review.
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Check one workshop submission before it is shared in exercise 2, Open a pull request.
+# Check spec.md before it is shared in exercise 2, Push & Review.
 #
-#   bash scripts/check.sh submissions/maple-42.md
-#   bash scripts/check.sh FILE --as submissions/maple-42.md --files 1
+#   bash scripts/check.sh spec.md --as spec.md --files 1
+#   bash scripts/check.sh FILE --as spec.md --files 1
 #
-#   --as PATH   the path the file has in the repo (use when FILE is a temp copy)
+#   --as PATH   the path the file has in the repo. It must be spec.md.
 #   --files N   how many files the pull request changes (more than 1 is a BLOCK)
 #   --text      check any text for private details only, with no file shape checks
 #
@@ -22,13 +22,13 @@ while [ $# -gt 0 ]; do
     --as) AS="${2:-}"; shift 2 || exit 2 ;;
     --files) NFILES="${2:-}"; shift 2 || exit 2 ;;
     --text) TEXT=1; shift ;;
-    -h|--help) sed -n '2,16p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,15p' "$0"; exit 0 ;;
     -*) echo "Unknown option: $1" >&2; echo "RESULT: ERROR"; exit 2 ;;
     *) FILE="$1"; shift ;;
   esac
 done
 if [ -z "$FILE" ] || [ ! -f "$FILE" ]; then
-  echo "Usage: bash scripts/check.sh submissions/<name>.md" >&2
+  echo "Usage: bash scripts/check.sh spec.md --as spec.md --files 1" >&2
   echo "RESULT: ERROR"
   exit 2
 fi
@@ -54,21 +54,12 @@ w() { local out; if out="$(lines "$@")"; then warn "$out"; fi; }
 SIZE="$(wc -c < "$FILE" | tr -d ' ')"
 RULES="$(grep -c -E '^[[:space:]]*[0-9]+[.)][[:space:]]' "$FILE")"
 if [ "$TEXT" = 0 ]; then
-  REPO_PATH="${AS:-$FILE}"
-  REPO_PATH="${REPO_PATH#./}"
-  case "$REPO_PATH" in */submissions/*) REPO_PATH="submissions/${REPO_PATH##*/submissions/}" ;; esac
-  NAME="${REPO_PATH##*/}"
+  [ "$NFILES" -le 1 ] || block "the pull request changes $NFILES files. It should change only spec.md."
+  if [ -n "$AS" ] && [ "${AS#./}" != "spec.md" ]; then
+    block "the file should be spec.md at the top of the repo."
+  fi
 
-  [ "$NFILES" -le 1 ] || block "the pull request changes $NFILES files. It should add one file."
-  case "$REPO_PATH" in
-    submissions/*/*) block "the file is in a subfolder. Put it straight in submissions/." ;;
-    submissions/*) : ;;
-    *) [ -n "$AS" ] && block "the file is outside submissions/." ;;
-  esac
-  echo "$NAME" | grep -q -E '^[a-z]+-[0-9]{2}\.md$' \
-    || block "the file name should be one lowercase word, a hyphen, 2 digits, and .md, such as maple-42.md."
-
-  [ "$SIZE" -le 16384 ] || block "the file is over 16 KB. Keep it to one rules file."
+  [ "$SIZE" -le 16384 ] || block "the file is over 16 KB. Keep it to one spec."
 
   [ "$RULES" -ge 1 ] || warn "no numbered rules found. Number each rule: 1. 2. 3."
 fi

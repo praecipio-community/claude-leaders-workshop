@@ -1,4 +1,4 @@
-# Rules: mapping two Jira estates before a merge
+# Spec: mapping two Jira estates before a merge
 
 **Goal:** A field and workflow map that the merge team signs off before any data moves.
 

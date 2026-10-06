@@ -1,4 +1,4 @@
-# Rules: weekly Jira admin hygiene report
+# Spec: weekly Jira admin hygiene report
 
 **Goal:** A one-page report each Monday that tells the Jira admin team what to clean up this week.
 
