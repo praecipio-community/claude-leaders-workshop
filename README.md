@@ -48,7 +48,7 @@ You need a personal GitHub account, not a work one. Claude helps you sign in wit
 
 This repository is public. Anyone can read a pull request, and it stays visible after it is closed. Claude takes out names, clients, emails, links, ticket numbers, and dollar figures before you share. You check it too. Your pull request is reviewed, never merged.
 
-Your copy of the repo (your fork) stays in your GitHub account after the workshop. You can delete it in its Settings. Your spec is yours. Paste it into your team's CLAUDE.md or project instructions.
+Your branch and pull request stay in the shared repo. They are closed after the workshop and never merged. Your spec is yours. Paste it into your team's CLAUDE.md or project instructions.
 
 ## About the CLAUDE.md files
 
