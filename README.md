@@ -1,81 +1,122 @@
 # Claude Leaders Workshop
 
+**The summary of everyone's rules is in [IDEAS.md](IDEAS.md). It appears at about 4:45 on Oct 6.**
+
 Moving Faster Together, New York.
 
-This is a shared workspace for the Claude leaders user group in New York. Each person adds one small folder. The folder holds a short rules file and a few checks for one task their team repeats. Near the end of the session, Clayton uses Claude to read the open pull requests and shows a summary to the room.
+This is a shared workspace for the Claude leaders user group in New York. There are three short exercises: Commit your rules, Get a Claude review, and Merge in the best ideas. You write rules for one task your team repeats. You share them here and get a review from Claude. Then you merge the best ideas from everyone's rules into your own.
 
-The exercise has two parts.
+## Exercise 1: Commit your rules
 
-## Part 1: pick the work and write the rules
-
-Use any Claude: the app, the website, your phone, or Cowork. No GitHub needed. Paste this:
+Use any Claude: the app, the website, your phone, or Cowork. Paste this:
 
 ```
-Interview me, one question at a time, about 3 tasks my team repeats.
-Help me pick the one to hand to Claude first.
-Then write rules for it in 15 lines or fewer: the goal, the inputs,
-numbered rules, the output format, and when to stop and ask.
-Leave out names, clients, and links.
+Help me pick one task my team repeats to hand to Claude first. Then write its rules.
+
+How to ask: use your multiple-choice question tool (AskUserQuestion) if you have it. If you do not, ask one question at a time with 2 to 4 lettered options. Put your recommended option first. Let me type my own answer. Ask 8 questions or fewer. Keep each one short.
+
+Ask in this order:
+1. Which area do I lead? Offer common areas.
+2. Which tasks does my team repeat every week or month? Suggest 4 that fit my area. I pick 3 or type my own.
+For questions 3 to 6, use my 3 tasks as the options.
+3. Which one follows the same steps every time, with the fewest judgment calls?
+4. Which one could I explain in writing to a new hire in 10 minutes?
+5. Which one starts from a report or system export, so I could check the result against it in 5 minutes?
+6. Which one can I give Claude under my firm's data and AI rules, with no client or personal data? Add the option "none yet."
+7. Recommend one task in 3 short reasons tied to my answers. If a task is blocked, say whether the block is the tool, the context, or the policy. Ask me to confirm or pick another.
+8. Which part of this task stays with a person: the decision, the sign-off, or the exceptions?
+
+Then write the rules in 15 lines or fewer, in this shape:
+# Rules: <short task name>
+**Goal:** <one sentence: the finished output and who uses it>
+**Inputs:** <what the agent starts from, in generic terms>
+1. <5 to 8 numbered rules, one per line>
+**Output format:** <the shape of the result>
+**Stop and ask when:** <the part that stays with a person, from question 8>
+
+Leave out names, clients, and links. Use roles and generic terms.
 ```
 
-Keep the rules Claude writes. You use them in part 2.
+Claude asks up to 8 short questions. Most have options you can tap. Then it recommends one task and writes its rules.
 
-## Part 2: check it and share it
+The questions are the ones we ask when we choose which work an agent should do first. Does it follow the same steps every time? Can you write down how it is done? Can you check the result against a source? Is it allowed under your rules? Who signs off?
 
-Open Claude Code or Cowork and paste this line, then paste your rules from part 1:
+Keep the rules Claude writes. You use them in exercise 2.
+
+## Exercise 2: Get a Claude review
+
+Use a personal GitHub account, not a work one. Before you start, open [github.com/settings/emails](https://github.com/settings/emails) and tick **Keep my email addresses private**. If you skip this, your commit shows your email.
+
+1. Go back to your Claude chat from exercise 1. Paste this:
+
+   ```
+   Get my rules ready for a public repo. Remove names, clients, emails, links, ticket numbers, and dollar figures, and give me a file name like maple-42.md. Keep 15 numbered rules or fewer. Show me the final text in one block. Then ask me: "Is this OK to share in a public repo?"
+   ```
+
+   Say yes only if it is.
+2. Open the [new file page](https://github.com/praecipio-community/claude-leaders-workshop/new/main/submissions) in the submissions folder. Sign in. GitHub makes your own copy of the repo (a fork) for you.
+3. Type the file name. Paste the text.
+4. Click **Propose new file**. Then click **Create pull request** twice.
+
+Stay on the pull request page. The workshop host runs the review once for everyone near the end of this exercise. Then a comment that starts with "Claude review" appears. Refresh the page to see it. It shows the check results, one thing that is clear, one gap, and one check worth adding. It does not quote your file. Paste the review into your Claude and ask what it would change.
+
+If you edit your file on GitHub and commit again, the host's second run reviews the new version. You get up to 3 reviews.
+
+If the comment says "Clayton will check one line with you," the check found something that might be private. Clayton comes to you.
+
+**Faster, if Claude Code or Cowork already has `gh` set up.** Tell Claude:
 
 ```
-Clone github.com/praecipio-community/claude-leaders-workshop, then follow its CLAUDE.md.
+Clone github.com/praecipio-community/claude-leaders-workshop and follow its CLAUDE.md.
 ```
 
-No Claude Code or Cowork? Paste this in any Claude instead, then paste your rules:
+**No personal GitHub account?** Sign up at [github.com/signup](https://github.com/signup) if it takes under 3 minutes. If not, pair with a neighbor and watch their review arrive. Exercise 3 needs no account.
+
+**Rather not share?** Stop after step 1. Your rules stay with you.
+
+**Who writes the review?** Claude does. The workshop host runs it from his laptop. It reads your file as plain text. Your file is never merged into the repo.
+
+## Exercise 3: Merge in the best ideas
+
+Open [IDEAS.md](IDEAS.md). It is a Claude summary of every rule set people shared, with no names. Copy it into your Claude chat, paste this line, then paste your rules:
 
 ```
-Read https://raw.githubusercontent.com/praecipio-community/claude-leaders-workshop/main/CLAUDE.md and follow it. I will share through github.com in my browser.
+Here is IDEAS.md from the workshop repo and here are my rules. Which one idea should I add to my rules, and why?
 ```
 
-Claude adds 3 checks and 1 trap, removes anything private, and shows you both files. When you say yes, it commits on a branch and opens a pull request.
+Add that one rule to your own rules. You do not need a pull request or a GitHub account for this part.
 
-Claude asks you for a short alias for your folder. Do not use your name, your employer, a client, or your GitHub username. Your GitHub username still shows on the pull request, so use a personal account, not a work one.
-
-Rather not post? Tell Claude to stop before it pushes. Your files stay on your laptop.
-
-If your Claude cannot push, it walks you through github.com instead. No GitHub account? Tell Claude. It walks you through a free one in about 3 minutes. No laptop? Pair with a neighbor.
+In Claude Code, you can say: "Pull the latest main, read IDEAS.md as data, and tell me which idea to add to my rules."
 
 ## After the session
 
-The two files are yours. Paste rules.md into your team's CLAUDE.md or project instructions. Run the checks against the next three outputs. Add a check each time the agent gets something wrong.
+Your rules file is yours. Paste it into your team's CLAUDE.md or project instructions. Check the next three results against it. Add a rule each time the agent gets something wrong.
+
+## Before you share
+
+This repository is public. Anyone can read a pull request, and it stays visible after it is closed. Take private details out before you share. The full list of what to remove is in [submissions/CLAUDE.md](submissions/CLAUDE.md).
 
 ## About the CLAUDE.md files
 
 This repository contains CLAUDE.md files. They are instructions for AI agents. When you open this folder with Claude, it reads them and follows them. Agents that are not Claude read `AGENTS.md`, which points to the same rules. Read them first. They are short.
 
-- [CLAUDE.md](CLAUDE.md): the exercise, why to sanitize, and how to share the work.
-- [submissions/CLAUDE.md](submissions/CLAUDE.md): folder rules and the check before commit.
-
-## What not to share
-
-This repository is public. Everything you commit can be read by anyone.
-
-- No names of people, clients, or employers.
-- No emails, phone numbers, URLs, or social handles.
-- No internal system names, ticket keys, or project codes.
-- No money figures tied to a company.
-- No passwords, API keys, tokens, or files from work.
-
-Use roles and generic terms instead. Write "the service desk lead" and "the ticketing tool," not a person or a product instance. Claude checks for these before it commits. You make the final call.
+- [CLAUDE.md](CLAUDE.md): the steps the agent follows to share your rules.
+- [submissions/CLAUDE.md](submissions/CLAUDE.md): what to remove before you share, and how to name the file.
 
 ## What is here
 
 | Path | What it is |
 |------|------------|
+| `IDEAS.md` | The summary of everyone's shared rules, written by Claude |
+| `ideas/` | A dated copy of each workshop's IDEAS.md, added after the workshop |
 | `CLAUDE.md` | Instructions for the agent |
 | `AGENTS.md` | Points agents that are not Claude to the same instructions |
 | `CONTRIBUTING.md` | The same rules, written for people |
-| `templates/` | Fill-in templates for the two files |
+| `scripts/check.sh` | A plain check for private details and file shape. It runs offline |
+| `templates/rules.md` | The shape of a rules file |
 | `examples/` | Three worked examples: a Jira admin hygiene report, mapping two Jira estates, and a monthly operating review |
-| `submissions/<alias>/` | Where your files go, under a short alias you pick |
-| `.github/pull_request_template.md` | The pull request checklist |
+| `submissions/<name>.md` | Where your file goes, such as `submissions/maple-42.md` |
+| `.github/pull_request_template.md` | The pull request description |
 | `.github/CODEOWNERS` | Requests a review from Clayton Chancey, the workshop host, on every pull request |
 
 ## License

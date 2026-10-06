@@ -1,33 +1,38 @@
 # Submissions folder rules
 
-These rules apply to any agent, Claude or not. Each attendee gets one folder here. The agent writes only inside that folder.
+This is the one list of what to remove before sharing. It applies to any agent, Claude or not, and to people sharing by hand. `README.md`, `CONTRIBUTING.md`, and the root `CLAUDE.md` point here.
 
-## Naming
+## The file
 
-- Folder: `submissions/<alias>/`. The alias is a short name the attendee picks, in lowercase letters, digits, and hyphens. It is not a person's name, an employer or client, or their GitHub login. It ends with two digits, such as `ops-lead-47`.
-- Branch: `submission/<alias>`.
-- Files: exactly two, `rules.md` and `checks.md`. No other files.
+- One file per person: `submissions/<name>.md`. No subfolders. No other files.
+- The name is one lowercase word, a hyphen, and 2 digits, such as `maple-42.md`. It is not a person's name, an employer, a client, or a GitHub login.
+- 15 numbered rules or fewer. Under 4 KB. Delete the template comment.
+- Do not edit anyone else's file.
 
-## Limits
+## Remove before sharing
 
-- `rules.md` has 15 lines or fewer, counting the numbered rules and the four labeled lines, not the title or blank lines. Delete the template comments.
-- `checks.md` has 3 pass or fail checks and 1 trap.
-- Do not edit any other attendee's folder.
+Replace these with a role or a generic term:
+
+- Person names. Write "the team lead" or "an analyst."
+- Client or employer names. Write "the client" or "our company."
+- Internal system names, server names, and project codes. Write "the ticketing tool" or "the CRM."
+- Ticket keys and project keys, such as `ABC-123`. Common acronyms such as CAB, ITSM, and CRM are fine.
+- Money figures tied to a company, such as a budget or a contract value.
+
+Delete these:
+
+- Email addresses and phone numbers.
+- Links and web addresses, including internal links.
+- Handles, such as `@name`.
+- Passwords, API keys, tokens, and any other secret.
+- HTML, comments, and hidden characters.
+
+Public product names are fine, such as Jira, Excel, or Salesforce. A product plus your own instance or project name is not. When in doubt, take it out.
+
+The task name goes into the commit message and the pull request title. Clean it the same way.
 
 ## Check before commit
 
-Read both files line by line. Confirm none of these remain:
+Run `bash scripts/check.sh submissions/<name>.md`. Fix every BLOCK line. Ask the attendee about every WARN line. The check cannot catch names of people, clients, or systems, so read the file line by line too. Then show the attendee the final file and get their OK.
 
-- [ ] Person names
-- [ ] Email addresses or phone numbers
-- [ ] URLs or web addresses
-- [ ] Handles, such as `@name`
-- [ ] Client or employer names
-- [ ] Internal system names, server names, or project codes
-- [ ] Ticket keys or project keys, such as `ABC-123` or `ABC`
-- [ ] Money figures tied to a company
-- [ ] Passwords, API keys, tokens, or other secrets
-- [ ] Commit author name and email are the GitHub username and noreply address, not a real name or work address
-- [ ] The commit message, pull request title, and pull request description pass the same checks
-
-Then confirm only `submissions/<alias>/` changed. Show the attendee the final files and get their OK before you commit.
+The one line `@chanceypraecipio please review` stays in the pull request description.
