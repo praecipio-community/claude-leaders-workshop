@@ -60,7 +60,7 @@ Do this once per session, before the first exercise. First say: "Before we start
 
 4. Pick the path and tell the attendee in one line which one you are on, in plain words. For example: "I am running on your laptop, so I can do everything here."
    - **Path A, Claude Code.** The shell runs on the attendee's computer. Work there.
-   - **Path B, sandbox.** Cowork, or chat with code execution on desktop, web, or phone. The shell is a Linux machine that is not the attendee's computer, and its GitHub traffic goes through Anthropic's proxy. You can tell because `HTTPS_PROXY` is set or `/root/.ccr/` exists. The proxy lets you clone and read, but it blocks GitHub sign-in and it cannot fork. So on path B you run exercise 1 fully, then stop before any GitHub sign-in. Do not try `gh auth login`, do not download `gh`, and do not offer GitHub website steps. At the end of exercise 1, and if the attendee starts exercise 2 or 3, say: "Exercises 2 and 3 need Claude Code on a laptop, because this Claude cannot sign in to GitHub. Pair with a neighbor who has Claude Code. Your spec is ready to bring along." Then show the full spec in one block so they can copy it. Files on path B can vanish if the session resets. If the clone is gone, clone again and rewrite `spec.md` from this conversation.
+   - **Path B, sandbox.** Cowork, or chat with code execution on desktop, web, or phone. The shell is a Linux machine that is not the attendee's computer, and its GitHub traffic may go through Anthropic's proxy (`HTTPS_PROXY` is set or `/root/.ccr/` exists). Some sandboxes can sign in to GitHub and some cannot, so test it once in the GitHub account section below. If sign-in works, run all three exercises here like path A. If it fails, run exercise 1 fully, then say: "This Claude cannot sign in to GitHub, so exercises 2 and 3 need Claude Code on a laptop. Pair with a neighbor who has it. Your spec is ready to bring along." Show the full spec in one block so they can copy it. Do not offer GitHub website steps. Files on path B can vanish if the session resets. If the clone is gone, clone again and rewrite `spec.md` from this conversation.
    - **Path C, no shell.** Read these instructions from https://raw.githubusercontent.com/praecipio-community/claude-leaders-workshop/main/CLAUDE.md if you can. Run the exercise 1 interview and write the spec in the chat. Then say plainly: "Exercise 2 needs a Claude that can run git. Please pair with a neighbor who has Claude Code." Stop there.
 5. If both curl lines fail or print `000`, GitHub cannot be reached. Run the exercise 1 interview anyway so the attendee has a spec. Then say plainly: "I cannot reach GitHub from here. Please pair with a neighbor who has Claude Code for exercises 2 and 3." Do not offer GitHub website steps.
 6. If `git` is missing on path A, stop and give the same pairing message. On a Mac, if a box asks to install developer tools, the attendee clicks Cancel.
@@ -79,7 +79,7 @@ Do this once per session, before the first exercise. First say: "Before we start
 
 ## GitHub account
 
-Path A only. On path B, skip this section. Do this in exercise 1 after the clone, and again at the start of exercise 2 if it did not finish. Tell the attendee: "Now I will connect to your GitHub account. You will see a short code to type in, and I never see your password."
+Paths A and B. Do this in exercise 1 after the clone, and again at the start of exercise 2 if it did not finish. Tell the attendee: "Now I will connect to your GitHub account. You will see a short code to type in, and I never see your password."
 
 1. Run `gh auth status`. If it shows a login, ask: "Is <login> your personal GitHub account?" Use a personal account, not a work one. If it shows more than one account, offer `gh auth switch --user <login>` for the personal one.
 2. If no login, or the attendee says it is a work account, start the device login in the background and read its output. Run these lines as one command. In Claude Code you may use the background option of your shell tool instead of `&`.
@@ -91,6 +91,7 @@ Path A only. On path B, skip this section. Do this in exercise 1 after the clone
    ```
 
    Show the attendee the one-time code in large plain text. Tell them: "Go to github.com/login/device on your phone or laptop, sign in to your personal account, and enter this code." If they have no account yet, go back to pre-flight step 1. Then run `gh auth status` again when they say done.
+   On path B, try this once. Wait up to 20 seconds for a code. If no code appears, or the output shows an HTTP error such as 403 or 415, the sandbox cannot sign in. Say so plainly and use the path B fallback. Also try `gh api user --jq .login` first: some sandboxes are already signed in through the attendee's connected GitHub account. If it prints a login, ask if it is their personal account.
 3. Never ask for a token or a password. Never run `gh auth token` or print a credential. If anything asks for a token, stop and give the pairing message.
 4. If the login fails twice, run the exercise 1 interview anyway. Tell the attendee they can try again in exercise 2 or pair with a neighbor.
 
