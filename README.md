@@ -6,7 +6,7 @@ Moving Faster Together, New York.
 
 This is a shared workspace for the Claude leaders user group in New York. You write a spec for one task your team repeats. A spec is a short set of rules an agent follows. You share it for a Claude review. Then you merge the best ideas from everyone's specs into your own.
 
-Claude runs every git step for you and explains each one. You make the decisions. Use Claude Code if you can. Cowork or Claude chat with code execution may also work.
+Claude runs every git step for you and explains each one. You make the decisions. Exercise 1 works in Claude Code, Cowork, or Claude chat with code execution. Exercises 2 and 3 need Claude Code on a laptop, because they sign in to GitHub. No Claude Code? Pair with a neighbor who has it.
 
 ## Exercise 1: Pull & Spec
 
