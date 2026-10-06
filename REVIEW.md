@@ -2,10 +2,10 @@ Claude review (run by the workshop facilitator).
 
 Checks: passed, 8 rules.
 
-Clear: Your spec forbids removing, changing, or contacting anyone about an account, so the agent only suggests results for a person to decide.
+Clear: Your spec makes clear that the agent only suggests keep, remove, or ask and never changes or contacts anyone.
 
-Gap: Your spec says mark "remove" or "ask" when any flag applies, but never says which flags mean remove and which mean ask.
+Gap: Your spec never says what to mark an account that is both stale and a shared account, or a no-match service account.
 
-A check to add: Count the rows in the table and confirm the total equals the number of accounts in the export, with unreadable rows listed separately.
+A check to add: Pick five accounts you already know the answer for and confirm the agent's suggested result and reason match yours.
 
 Next: ask your Claude what it would change in spec.md.
