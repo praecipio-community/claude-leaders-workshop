@@ -9,7 +9,7 @@
 3. Flag accounts whose role is higher than the manager's listed access level for that person.
 4. Flag shared, generic, or service accounts for separate review.
 5. Mark an account "keep" only when it matches the staff list, has recent sign-in, and the role fits.
-6. Mark an account "remove" or "ask" when any flag applies, and give the reason in a few words.
+6. Mark an account "remove" when it has no staff match or no sign-in for 90 days or more. Mark it "ask" for role mismatches and shared or service accounts. Give the reason in a few words.
 7. Never remove, change, or contact anyone about an account.
 8. Report counts for each result, and list any row you could not read.
 
