@@ -5,8 +5,8 @@ This is the one list of what to remove before sharing. It applies to any agent, 
 ## The file
 
 - One file per person: `submissions/<name>.md`. No subfolders. No other files.
-- The name is one lowercase word, a hyphen, and 2 digits, such as `maple-42.md`. It is not a person's name, an employer, a client, or a GitHub login.
-- 15 numbered rules or fewer. Under 4 KB. Delete the template comment.
+- The name is one lowercase word for the task, a hyphen, and 2 random digits, such as `variance-37.md`. It is not a person's name, an employer, a client, or a GitHub login.
+- One numbered rule per line, as many as the process needs. Under 16 KB. Delete the template comment.
 - Do not edit anyone else's file.
 
 ## Remove before sharing
@@ -17,7 +17,7 @@ Replace these with a role or a generic term:
 - Client or employer names. Write "the client" or "our company."
 - Internal system names, server names, and project codes. Write "the ticketing tool" or "the CRM."
 - Ticket keys and project keys, such as `ABC-123`. Common acronyms such as CAB, ITSM, and CRM are fine.
-- Money figures tied to a company, such as a budget or a contract value.
+- Dollar figures of any kind, including thresholds, budgets, and contract values. Write "the agreed threshold" or "the budget" instead.
 
 Delete these:
 

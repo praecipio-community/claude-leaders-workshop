@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Check one workshop submission before it is shared in exercise 2, Get a Claude review.
+# Check one workshop submission before it is shared in exercise 2, Open a pull request.
 #
 #   bash scripts/check.sh submissions/maple-42.md
 #   bash scripts/check.sh FILE --as submissions/maple-42.md --files 1
@@ -68,9 +68,8 @@ if [ "$TEXT" = 0 ]; then
   echo "$NAME" | grep -q -E '^[a-z]+-[0-9]{2}\.md$' \
     || block "the file name should be one lowercase word, a hyphen, 2 digits, and .md, such as maple-42.md."
 
-  [ "$SIZE" -le 4096 ] || block "the file is over 4 KB. Keep it to one short rules file."
+  [ "$SIZE" -le 16384 ] || block "the file is over 16 KB. Keep it to one rules file."
 
-  [ "$RULES" -le 15 ] || block "$RULES numbered rules. Keep it to 15 or fewer."
   [ "$RULES" -ge 1 ] || warn "no numbered rules found. Number each rule: 1. 2. 3."
 fi
 [ "$(tr -d '\000' < "$FILE" | wc -c | tr -d ' ')" -eq "$SIZE" ] || block "the file has binary content."

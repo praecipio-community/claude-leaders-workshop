@@ -1,6 +1,6 @@
 # Rules: <short task name>
 
-<!-- 15 numbered rules or fewer. One rule per line. Write for an agent that has never seen this task. Delete this comment before you share. -->
+<!-- One numbered rule per line, as many as the real process needs. Write for an agent that has never seen this task. Delete this comment before you share. -->
 
 **Goal:** <one sentence: what the finished output is and who uses it>
 

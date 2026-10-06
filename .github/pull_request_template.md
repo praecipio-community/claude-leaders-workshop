@@ -1,4 +1,4 @@
-Exercise 2: Get a Claude review
+Exercise 2: Open a pull request
 
 Task: <one line: the task your rules cover>
 
