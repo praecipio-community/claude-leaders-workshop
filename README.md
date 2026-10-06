@@ -1,6 +1,6 @@
 # Claude Leaders Workshop
 
-**The summary of everyone's specs is in [IDEAS.md](IDEAS.md). It appears at about 4:45 on Oct 6.**
+**The summary of everyone's specs is in [IDEAS.md](IDEAS.md). The host publishes it during the session.**
 
 Moving Faster Together, New York.
 
