@@ -12,6 +12,10 @@
 6. Give counts per project, then the 10 riskiest items first.
 7. Never write to either site. This is a read-only plan.
 
+**Cutoffs:** Show the 10 riskiest items first. A field counts as in use if any automation, filter, or screen names it.
+
+**When data is missing, late, or conflicting:** If either export is missing a section, stop and report. List a field with no type as unknown. Do not guess a match.
+
 **Output format:** One table for fields, one for statuses, then a short list of open decisions.
 
 **Stop and ask when:** Two fields share a name but have different types, or a workflow has no clear owner.
