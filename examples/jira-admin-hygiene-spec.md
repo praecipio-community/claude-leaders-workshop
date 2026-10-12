@@ -12,6 +12,10 @@
 6. Mark any item that changed since last week's report as "new."
 7. Do not recommend deletion. Recommend "review" and name the owner role.
 
+**Cutoffs:** 90 days for unused fields, 180 days for quiet projects, 60 days without a login, and a change of more than half against last week.
+
+**When data is missing, late, or conflicting:** If the export is more than 7 days old or a section is missing, stop and report. List an item with no last-used date as unknown. Do not guess.
+
 **Output format:** Four short tables, one per section, then three lines on what to do first.
 
 **Stop and ask when:** The export is missing a section, or the counts differ from last week by more than half.

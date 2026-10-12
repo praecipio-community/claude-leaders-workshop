@@ -12,6 +12,10 @@
 6. Keep every number exactly as it appears in the export.
 7. Say "no update" when a team sent nothing. Do not fill the gap.
 
+**Cutoffs:** The 3 metrics with the largest percent change against plan. A risk counts when two or more updates name it.
+
+**When data is missing, late, or conflicting:** Write no update for a team that sent nothing. When an update and the export disagree, keep the export number and list the mismatch.
+
 **Output format:** Three short sections: what moved, open risks, decisions needed. One page.
 
 **Stop and ask when:** A number in an update does not match the export, or a metric is missing.

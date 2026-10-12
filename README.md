@@ -2,11 +2,11 @@
 
 **The summary of everyone's specs is in [IDEAS.md](IDEAS.md). The host publishes it during the session.**
 
-Moving Faster Together, New York.
+Moving Faster Together, Chicago.
 
-This is a shared workspace for the Claude leaders user group in New York. You write a spec for one task your team repeats. A spec is a short set of rules an agent follows. You share it for a Claude review. Then you merge the best ideas from everyone's specs into your own.
+This is a shared workspace for the Claude leaders user group in Chicago. You write a spec for one task your team repeats. A spec is a short set of rules an agent follows. You share it for a Claude review. Then you merge the best ideas from everyone's specs into your own.
 
-Claude runs every git step for you and explains each one. You make the decisions. Exercise 1 works in Claude Code, Cowork, or Claude chat with code execution. Exercises 2 and 3 need Claude Code on a laptop, because they sign in to GitHub. No Claude Code? Pair with a neighbor who has it.
+Claude runs every git step for you and explains each one. You make the decisions. All three exercises work in Claude Code on a laptop. They also work in the Claude app on a phone, where you tap one Fork link on GitHub. Claude chat with no code tool can run exercise 1 only. If you get stuck, pair with a neighbor.
 
 ## Exercise 1: Pull & Spec
 
@@ -16,7 +16,7 @@ Type this into Claude:
 Clone github.com/praecipio-community/claude-leaders-workshop and follow its CLAUDE.md. Start exercise 1.
 ```
 
-Claude copies this repo, checks your GitHub account, and asks you about 8 short questions. Then it writes `spec.md` for one task. Nothing is shared yet.
+Claude copies this repo, checks your GitHub account, and asks you about 10 short questions. The last three pin down the edges: the number your task turns on, what to do with messy data, and when Claude must stop. Then it writes `spec.md` for one task. Nothing is shared yet.
 
 Why: these are the questions we ask when we choose which work an agent should do first. Does it follow the same steps every time? Can you check the result? Is it allowed under your rules? Who signs off?
 
@@ -44,7 +44,7 @@ Why: this is how a team builds on what everyone learned.
 
 ## Before you share
 
-You need a personal GitHub account, not a work one. Claude helps you sign in with a one-time code. You never type a password or a token into Claude. If Claude cannot reach GitHub, pair with a neighbor who has Claude Code.
+You need a personal GitHub account, not a work one. No account yet? Claude walks you through a free sign-up in about 3 minutes. Then Claude helps you sign in with a one-time code. You never type a password or a token into Claude. If Claude cannot reach GitHub, pair with a neighbor who has Claude Code.
 
 This repository is public. Anyone can read a pull request, and it stays visible after it is closed. Claude takes out names, clients, emails, links, ticket numbers, and dollar figures before you share. You check it too. Your pull request is reviewed, never merged.
 
