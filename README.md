@@ -26,7 +26,7 @@ Why: these are the questions we ask when we choose which work an agent should do
 Start exercise 2. Clean up spec.md, commit it, open a pull request, and wait for the review.
 ```
 
-Claude takes private details out of your spec and shows it to you. If you say it is OK to share, it saves the change on a branch, opens a pull request, and waits for a review. A comment that starts with "Claude review" arrives in about 2 minutes. Claude reads it to you and offers one edit.
+Claude takes private details out of your spec and shows it to you. If you say it is OK to share, it saves the change on a branch, opens a pull request, and waits for a review. A comment that starts with "Claude review" arrives in about a minute. Claude reads it to you and offers one edit.
 
 Why: this is how a team proposes a change and gets it reviewed before anyone accepts it.
 
