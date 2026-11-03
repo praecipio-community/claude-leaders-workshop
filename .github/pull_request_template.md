@@ -1,5 +1,5 @@
 Exercise 2: Push & Review
 
-Task: <one line: the task your spec covers>
+Task: <the task name from line 1 of spec.md, after '# Spec: '>
 
 @chanceypraecipio please review
