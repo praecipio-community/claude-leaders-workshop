@@ -1,11 +1,11 @@
 Claude review (run by the workshop facilitator).
 
-Checks: passed, 10 rules.
+Checks: passed, 11 rules.
 
-Clear: Your spec makes the report strictly read-only, so the agent knows to list overdue devices and never install or approve anything.
+Clear: Your spec makes the report read-only, so an agent never installs or schedules anything and leaves exceptions and sign-off to the lead.
 
-Gap: Your spec never says whether a device that has not checked in for weeks counts as stale data to skip or still gets reported.
+Gap: Your spec does not say which date the 7 days and 30 days count from, so an agent may pick any reference date.
 
-A check to add: Compare the count line to the table and skipped list, and confirm checked devices equal overdue, clean, and skipped devices combined.
+A check to add: Pick one device in the next report, recount its days overdue from the catalog release date, and confirm the number matches.
 
 Next: ask your Claude what it would change in spec.md.
