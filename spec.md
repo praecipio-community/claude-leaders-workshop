@@ -11,11 +11,12 @@
 5. For each overdue device, give the device name, the overdue patches, and the days overdue for the oldest one.
 6. Sort overdue devices by the oldest overdue patch first.
 7. Give a count of overdue devices and the total devices checked.
-8. Skip any device with missing or conflicting data and list it in a separate section with the reason.
-9. Do not install, schedule, or change anything. This is a read-only report.
-10. Leave exceptions and the sign-off to the team lead. Do not mark any device as an approved exception.
+8. Skip any device with no check-in in the last 30 days and list it as stale.
+9. Skip any device with missing or conflicting data and list it in a separate section with the reason.
+10. Do not install, schedule, or change anything. This is a read-only report.
+11. Leave exceptions and the sign-off to the team lead. Do not mark any device as an approved exception.
 
-**Cutoffs:** A patch is overdue 7 days after its release date.
+**Cutoffs:** A patch is overdue 7 days after its release date. A device with no check-in for 30 days is stale.
 
 **When data is missing, late, or conflicting:** Skip that device, list it with the reason, and keep going with the rest.
 
