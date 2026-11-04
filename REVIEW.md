@@ -2,10 +2,10 @@ Claude review (run by the workshop facilitator).
 
 Checks: passed, 11 rules.
 
-Clear: Your spec makes the report read-only, so an agent never installs or schedules anything and leaves exceptions and sign-off to the lead.
+Clear: Your spec makes the agent read-only, with a 7 day overdue cutoff and exceptions and sign-off left to the team lead.
 
-Gap: Your spec does not say which date the 7 days and 30 days count from, so an agent may pick any reference date.
+Gap: Your spec never says whether a device counts in the total or the overdue count when it is skipped as stale or conflicting.
 
-A check to add: Pick one device in the next report, recount its days overdue from the catalog release date, and confirm the number matches.
+A check to add: Check that every device in the export appears exactly once as overdue, not overdue, stale, or skipped, with counts that add up.
 
 Next: ask your Claude what it would change in spec.md.
